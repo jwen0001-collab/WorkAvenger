@@ -1,5 +1,5 @@
-
 import { CharacterProfile, GestureType, Language } from './types';
+import { getAssetPath } from './utils/assetHelper';
 
 export const TEXTS = {
   [Language.ZH]: {
@@ -24,14 +24,16 @@ export const TEXTS = {
   }
 };
 
+
+
 export const SOUNDS = {
-  PUNCH: '/sounds/punch.mp3',
-  SLAP: '/sounds/slap.mp3',
-  SCOLD: '/sounds/scold.mp3',
-  HIT: '/sounds/hit.mp3',
-  VICTORY: '/sounds/victory.mp3',
-  FINISH: '/sounds/scold.mp3',
-  TEAR: '/sounds/tear.mp3'
+  PUNCH: getAssetPath('sounds/punch.mp3'),
+  SLAP: getAssetPath('sounds/slap.mp3'),
+  SCOLD: getAssetPath('sounds/scold.mp3'),
+  HIT: getAssetPath('sounds/hit.mp3'),
+  VICTORY: getAssetPath('sounds/victory.mp3'),
+  FINISH: getAssetPath('sounds/scold.mp3'),
+  TEAR: getAssetPath('sounds/tear.mp3')
 };
 
 
@@ -45,7 +47,7 @@ export const CHARACTERS: CharacterProfile[] = [
     name: '挑刺张',
     role: '细节控 / Micromanager',
     description: '盯着错别字不放，还要你讲“大局观”。',
-    image: '/assets/body_micromanager.png',
+    image: getAssetPath('assets/body_micromanager.png'),
     prompt: 'A 3D Pixar style office manager body, wearing a suit, holding a red pen. The head should be prepared for a face photo overlay.',
     maxHp: 1000,
     gender: 'male'
@@ -55,7 +57,7 @@ export const CHARACTERS: CharacterProfile[] = [
     name: 'PUA李',
     role: '画饼大师 / Dreamer',
     description: '不做坏人但干尽坏事，满嘴“为了你好”。',
-    image: '/assets/body_dreamer.png',
+    image: getAssetPath('assets/body_dreamer.png'),
     prompt: 'A 3D Pixar style businessman body, hands spread as if talking about a big vision, wearing a fancy blazer.',
     maxHp: 1200,
     gender: 'male'
@@ -65,7 +67,7 @@ export const CHARACTERS: CharacterProfile[] = [
     name: '甩锅王',
     role: '装死专家 / Buck-Passer',
     description: '除了干活啥都会，遇事只会说“不知道”。',
-    image: '/assets/body_slacker.png',
+    image: getAssetPath('assets/body_slacker.png'),
     prompt: 'A 3D Pixar style young male employee body, slouched, hiding behind a computer monitor.',
     maxHp: 800,
     gender: 'male'
@@ -75,7 +77,7 @@ export const CHARACTERS: CharacterProfile[] = [
     name: '冷淡刘',
     role: '透明人 / Ghost',
     description: '“不归我管，别找我。” 冷到空气结冰。',
-    image: '/assets/body_ghost.png',
+    image: getAssetPath('assets/body_ghost.png'),
     prompt: 'A 3D Pixar style senior female employee body, arms crossed, wearing a gray blazer.',
     maxHp: 900,
     gender: 'female'

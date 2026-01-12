@@ -1,4 +1,5 @@
 import { GestureType } from '../types';
+import { getAssetPath } from '../utils/assetHelper';
 
 export interface Reaction {
   dialogue: string;
@@ -9,42 +10,42 @@ export const BODY_ASSETS = [
   {
     id: 'body_male_1',
     name: 'Old School Boss',
-    image: './assets/body_male_1.png', // We will generate these
+    image: getAssetPath('assets/body_male_1.png'), // We will generate these
     hole: { x: 50, y: 15, w: 20, h: 25 }, // Percentage coordinates for face hole
     gender: 'male'
   },
   {
     id: 'body_female_1',
     name: 'Strict Manager',
-    image: './assets/body_female_1.png',
+    image: getAssetPath('assets/body_female_1.png'),
     hole: { x: 50, y: 15, w: 20, h: 25 },
     gender: 'female'
   },
   {
     id: 'body_micromanager',
     name: 'Micromanager',
-    image: './assets/body_micromanager.png',
+    image: getAssetPath('assets/body_micromanager.png'),
     hole: { x: 50, y: 15, w: 20, h: 25 }, // Approximate hole, might need tuning
     gender: 'male'
   },
   {
     id: 'body_dreamer',
     name: 'Dreamer',
-    image: './assets/body_dreamer.png',
+    image: getAssetPath('assets/body_dreamer.png'),
     hole: { x: 50, y: 15, w: 20, h: 25 },
     gender: 'male'
   },
   {
     id: 'body_slacker',
     name: 'Slacker',
-    image: './assets/body_slacker.png',
+    image: getAssetPath('assets/body_slacker.png'),
     hole: { x: 50, y: 20, w: 20, h: 25 }, // Slouching, maybe lower face
     gender: 'male'
   },
   {
     id: 'body_ghost',
     name: 'Ghost',
-    image: './assets/body_ghost.png',
+    image: getAssetPath('assets/body_ghost.png'),
     hole: { x: 50, y: 15, w: 20, h: 25 },
     gender: 'female'
   }
