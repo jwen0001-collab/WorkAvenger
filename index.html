@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workplace Avenger</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      background-color: #f3f4f6;
+      color: #1f2937;
+      margin: 0;
+      padding: 0;
+    }
+
+    @keyframes fly-away {
+      0% {
+        transform: translate(0, 0) rotate(0deg);
+      }
+
+      20% {
+        transform: translate(-20px, 10px) rotate(-5deg);
+      }
+
+      100% {
+        transform: translate(100vw, -100vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    .animate-fly {
+      animation: fly-away 0.8s forwards ease-in;
+    }
+
+    @keyframes dodge-move {
+      0% {
+        transform: translateX(0);
+      }
+
+      25% {
+        transform: translateX(-100px) rotate(-5deg);
+      }
+
+      75% {
+        transform: translateX(100px) rotate(5deg);
+      }
+
+      100% {
+        transform: translateX(0);
+      }
+    }
+
+    .animate-dodge {
+      animation: dodge-move 0.4s ease-in-out;
+    }
+
+    @keyframes shake-impact {
+
+      0%,
+      100% {
+        transform: translate(0, 0);
+      }
+
+      10%,
+      30%,
+      50%,
+      70%,
+      90% {
+        transform: translate(-8px, 8px);
+      }
+
+      20%,
+      40%,
+      60%,
+      80% {
+        transform: translate(8px, -8px);
+      }
+    }
+
+    .shake-screen {
+      animation: shake-impact 0.3s cubic-bezier(.36, .07, .19, .97) both;
+    }
+
+    @keyframes hit-flash {
+      0% {
+        filter: brightness(3);
+        transform: scale(1.1);
+      }
+
+      100% {
+        filter: brightness(1);
+        transform: scale(1);
+      }
+    }
+
+    .impact-hit {
+      animation: hit-flash 0.2s ease-out;
+    }
+
+    @keyframes paper-float {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+      }
+
+      100% {
+        transform: translateY(-500px) rotate(720deg);
+        opacity: 0;
+      }
+    }
+
+    .particle-paper {
+      position: absolute;
+      width: 20px;
+      height: 25px;
+      background: white;
+      border: 1px solid #ddd;
+      animation: paper-float 1s forwards ease-out;
+      pointer-events: none;
+    }
+
+    /* 模拟人物阴影 */
+    .char-shadow {
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 200px;
+      height: 40px;
+      background: rgba(0, 0, 0, 0.1);
+      border-radius: 50%;
+      filter: blur(10px);
+      z-index: -1;
+    }
+  </style>
+
+  <link rel="stylesheet" href="/index.css">
+</head>
+
+<body class="overflow-hidden">
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+
+</html>

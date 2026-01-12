@@ -1,0 +1,7 @@
+{
+  "name": "职场复仇者 AI",
+  "description": "一款基于手势控制的职场压力释放游戏，利用 Gemini Vision 识别动作并生成动态 AI 老板反应。",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
