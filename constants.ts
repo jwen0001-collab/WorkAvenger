@@ -85,8 +85,8 @@ export const CHARACTERS: CharacterProfile[] = [
 ];
 
 export const GESTURE_MAP = {
-  [GestureType.FIST]: { action: 'PUNCH', damage: 15, label: '👊 暴击', sound: SOUNDS.PUNCH },
-  [GestureType.PALM]: { action: 'SLAP', damage: 10, label: '🖐️ 扇脸', sound: SOUNDS.SLAP },
-  [GestureType.TEAR]: { action: 'RIP', damage: 25, label: '👐 手撕', sound: SOUNDS.TEAR },
+  [GestureType.FIST]: { action: 'PUNCH', damage: 45, label: '👊 暴击', sound: SOUNDS.PUNCH },
+  [GestureType.PALM]: { action: 'SLAP', damage: 30, label: '🖐️ 扇脸', sound: SOUNDS.SLAP },
+  [GestureType.TEAR]: { action: 'RIP', damage: 75, label: '👐 手撕', sound: SOUNDS.TEAR },
   [GestureType.NONE]: { action: 'IDLE', damage: 0, label: '', sound: '' },
 };

@@ -148,7 +148,7 @@ const GameScene: React.FC<GameSceneProps> = ({ character, onFinish, lang }) => {
           <div className="flex items-center gap-6 mt-2">
             <div className="w-80 h-6 bg-slate-200/50 rounded-full overflow-hidden p-1 shadow-inner border border-white">
               <div
-                className={`h-full transition-all duration-300 rounded-full ${hp < 30 ? 'bg-red-500 animate-pulse' : 'bg-orange-500 shadow-lg'}`}
+                className={`h-full transition-all duration-300 rounded-full ${(hp / character.maxHp) < 0.2 ? 'bg-red-500 animate-pulse' : 'bg-orange-500 shadow-lg'}`}
                 style={{ width: `${(hp / character.maxHp) * 100}%` }}
               ></div>
             </div>
